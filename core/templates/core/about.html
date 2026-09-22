@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}À propos{% endblock %}
+{% block content %}
+  <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
+    <div class="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.22em] text-[#e06b45]">À propos du studio</p>
+        <h1 class="mt-6 text-6xl font-black leading-[0.95] tracking-[-0.06em] sm:text-7xl">
+          Un petit studio.
+          <br />
+          <span class="text-[#e06b45]">Une grande attention</span> aux détails.
+        </h1>
+      </div>
+      <div class="max-w-xl lg:pb-2">
+        <p class="text-2xl font-bold leading-tight">Nous croyons aux produits qui donnent envie de revenir, pas seulement à ceux qui fonctionnent.</p>
+        <p class="mt-6 leading-8 text-[#17201d]/65">Atelier est une base de travail pour les équipes qui veulent avancer avec clarté. Nous mêlons stratégie, design et développement pour transformer les problèmes complexes en expériences évidentes.</p>
+      </div>
+    </div>
+  </section>
+  <section class="bg-[#17201d] px-6 py-20 text-[#f7f5ef] lg:px-10 lg:py-24">
+    <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.7fr_1.3fr]">
+      <p class="text-sm font-bold uppercase tracking-[0.22em] text-[#d6f36b]">Notre manière de faire</p>
+      <div class="grid gap-10 sm:grid-cols-2">
+        <div>
+          <span class="text-5xl font-black text-[#e06b45]">01</span>
+          <h2 class="mt-4 text-2xl font-black">Écouter avant de dessiner</h2>
+          <p class="mt-3 leading-7 text-[#f7f5ef]/60">Les bonnes questions font souvent gagner plus de temps que les bonnes réponses.</p>
+        </div>
+        <div>
+          <span class="text-5xl font-black text-[#e06b45]">02</span>
+          <h2 class="mt-4 text-2xl font-black">Rendre les choses évidentes</h2>
+          <p class="mt-3 leading-7 text-[#f7f5ef]/60">Chaque choix doit aider quelqu'un à comprendre, décider ou agir.</p>
+        </div>
+        <div>
+          <span class="text-5xl font-black text-[#e06b45]">03</span>
+          <h2 class="mt-4 text-2xl font-black">Construire pour durer</h2>
+          <p class="mt-3 leading-7 text-[#f7f5ef]/60">Une belle interface compte. Une base fiable compte encore davantage.</p>
+        </div>
+        <div>
+          <span class="text-5xl font-black text-[#e06b45]">04</span>
+          <h2 class="mt-4 text-2xl font-black">Rester humain</h2>
+          <p class="mt-3 leading-7 text-[#f7f5ef]/60">Le travail est meilleur quand les échanges sont simples, honnêtes et directs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mx-auto max-w-7xl px-6 py-20 lg:px-10"><div class="flex flex-col justify-between gap-8 border-t-2 border-[#17201d] pt-6 sm:flex-row sm:items-end"><h2 class="max-w-lg text-4xl font-black tracking-tight">La prochaine page de l'histoire peut commencer ici.</h2><a href="{% url 'contact' %}"
+   class="rounded-full bg-[#e06b45] px-6 py-4 text-center text-sm font-bold text-white transition hover:bg-[#17201d]">Nous contacter ↗</a></div></section>
+{% endblock %}

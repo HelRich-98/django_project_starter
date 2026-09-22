@@ -1,0 +1,65 @@
+{% load static tailwind_tags %}
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Une base Django moderne, claire et prête à faire grandir vos idées."
+    />
+
+    <title>{% block title %}{% endblock %} · {{ site_info.site_name }}</title>
+    {% tailwind_css %} {% block extra_head %}{% endblock %}
+  </head>
+  <body class="bg-[#f7f5ef] font-sans text-[#17201d] antialiased">
+    <div class="min-h-screen overflow-hidden">
+      <header
+        class="relative z-10 border-b border-[#17201d]/10 bg-[#f7f5ef]/90 backdrop-blur"
+      >
+        <nav
+          class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10"
+          aria-label="Navigation principale"
+        >
+          <a
+            href="{% url 'index' %}"
+            class="flex items-center gap-3 text-lg font-bold tracking-tight"
+          >
+            <span
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-[#d6f36b] text-sm font-black"
+              >A</span
+            >
+            {{ site_info.site_name|default:"Site name" }}
+          </a>
+          <div class="hidden items-center gap-8 text-sm font-semibold md:flex">
+            <a href="{% url 'index' %}" class="transition hover:text-[#e06b45]"
+              >Accueil</a
+            >
+            <a href="{% url 'about' %}" class="transition hover:text-[#e06b45]"
+              >À propos</a
+            >
+            <a
+              href="{% url 'contact' %}"
+              class="rounded-full bg-[#17201d] px-5 py-3 text-[#f7f5ef] transition hover:bg-[#e06b45]"
+              >Parlons-nous</a
+            >
+          </div>
+          <a
+            href="{% url 'contact' %}"
+            class="rounded-full border border-[#17201d]/20 px-4 py-2 text-sm font-semibold md:hidden"
+            >Contact</a
+          >
+        </nav>
+      </header>
+      <main>{% block content %}{% endblock %}</main>
+      <footer class="border-t border-[#17201d]/10 px-6 py-8 lg:px-10">
+        <div
+          class="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-[#17201d]/60 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>Une base sobre pour des projets qui comptent.</p>
+          <p>© {% now "Y" %} {{ site_info.site_name }}</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

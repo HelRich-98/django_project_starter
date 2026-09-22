@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% block title %}Accueil{% endblock %}
+<!-- prettier-ignore -->
+{% block content %}
+  <div class="flex flex-col items-center justify-center min-h-screen py-2">
+    <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-10 lg:pb-28 lg:pt-24">
+      <div class="grid items-end gap-14 lg:grid-cols-[1.15fr_0.85fr]">
+        <div>
+          <p class="mb-7 flex items-center gap-3 text-sm font-bold uppercase tracking-[0.22em] text-[#e06b45]">
+            <span class="h-2 w-2 rounded-full bg-[#e06b45]"></span>Studio
+            numérique indépendant
+          </p>
+          <h1 class="max-w-4xl text-6xl font-black leading-[0.95] tracking-[-0.06em] sm:text-7xl lg:text-8xl">
+            Des idées nettes.
+            <br />
+            <span class="text-[#e06b45]">Des expériences</span>
+            vivantes.
+          </h1>
+          <p class="mt-8 max-w-xl text-lg leading-8 text-[#17201d]/65">
+            Nous transformons les bonnes intuitions en produits numériques simples
+            à comprendre, agréables à utiliser et prêts pour la suite.
+          </p>
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="{% url 'contact' %}"
+               class="rounded-full bg-[#17201d] px-6 py-4 text-sm font-bold text-[#f7f5ef] transition hover:-translate-y-1 hover:bg-[#e06b45]">Démarrer un projet <span class="ml-3">↗</span></a>
+            <a href="{% url 'about' %}"
+               class="px-3 py-4 text-sm font-bold underline decoration-[#d6f36b] decoration-4 underline-offset-4">Découvrir notre approche</a>
+          </div>
+        </div>
+        <div class="relative min-h-90 overflow-hidden rounded-4xl bg-[#17201d] p-8 text-[#f7f5ef] sm:min-h-107.5">
+          <div class="absolute -right-16 -top-16 h-56 w-56 rounded-full border-28 border-[#d6f36b]"></div>
+          <div class="absolute -bottom-20 -left-16 h-64 w-64 rounded-full border-18 border-[#e06b45]"></div>
+          <div class="relative flex h-full flex-col justify-between">
+            <span class="text-sm font-semibold text-[#d6f36b]">01 / 03</span>
+            <div>
+              <p class="text-4xl font-black leading-tight tracking-tight">
+                Le web peut être
+                <br />
+                utile et audacieux.
+              </p>
+              <div class="mt-8 h-px bg-[#f7f5ef]/20"></div>
+              <p class="mt-5 text-sm leading-6 text-[#f7f5ef]/65">Design, stratégie et technologie réunis dans un même mouvement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#d6f36b] px-6 py-8 lg:px-10">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-6">
+        <p class="text-xl font-bold tracking-tight">Une idée mérite plus qu'un simple écran.</p>
+        <a href="{% url 'contact' %}"
+           class="text-sm font-bold underline underline-offset-4">Parlons de la vôtre ↗</a>
+      </div>
+    </section>
+    <section class="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-3 lg:px-10">
+      <div class="lg:col-span-1">
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-[#e06b45]">Ce que nous faisons</p>
+        <h2 class="mt-5 text-4xl font-black tracking-tight">
+          Penser juste.
+          <br />
+          Construire mieux.
+        </h2>
+      </div>
+      <div class="grid gap-8 sm:grid-cols-2 lg:col-span-2">
+        <article class="border-t-2 border-[#17201d] pt-5">
+          <p class="text-2xl font-black">
+            01 <span class="text-[#e06b45]">/</span> Stratégie
+          </p>
+          <p class="mt-4 leading-7 text-[#17201d]/65">
+            Clarifier le problème, trouver le bon angle et donner une direction au
+            projet.
+          </p>
+        </article>
+        <article class="border-t-2 border-[#17201d] pt-5">
+          <p class="text-2xl font-black">
+            02 <span class="text-[#e06b45]">/</span> Design
+          </p>
+          <p class="mt-4 leading-7 text-[#17201d]/65">
+            Créer des interfaces qui ont du caractère sans jamais sacrifier la
+            simplicité.
+          </p>
+        </article>
+        <article class="border-t-2 border-[#17201d] pt-5">
+          <p class="text-2xl font-black">
+            03 <span class="text-[#e06b45]">/</span> Technologie
+          </p>
+          <p class="mt-4 leading-7 text-[#17201d]/65">
+            Livrer une base solide, maintenable et prête à évoluer avec votre
+            activité.
+          </p>
+        </article>
+        <article class="border-t-2 border-[#17201d] pt-5">
+          <p class="text-2xl font-black">
+            04 <span class="text-[#e06b45]">/</span> Transmission
+          </p>
+          <p class="mt-4 leading-7 text-[#17201d]/65">
+            Partager les outils et les décisions pour que votre équipe reste
+            autonome.
+          </p>
+        </article>
+      </div>
+    </section>
+  </div>
+{% endblock %}

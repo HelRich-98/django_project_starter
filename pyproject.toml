@@ -1,0 +1,35 @@
+[project]
+name = "django-stater-template"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "django>=6.1.1",
+    "django-tailwindcss>=0.4.0",
+    "pillow>=12.3.0",
+    "ruff>=0.16.8",
+    "python-dotenv>=1.0.0",
+    "django-allauth>=65.19.4",
+    "dj-database-url>=3.1.2",
+    "python-decouple>=3.8",
+    "django-htmx>=1.29.0",
+    "djlint>=1.46.2",
+    "djangofmt>=1.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "django-tailwind[cookiecutter,honcho,reload]>=4.5.0",
+    "django-debug-toolbar>=8.0.0",
+    "fake-py>=0.13.1",
+]
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.format]
+quote-style = "double"
